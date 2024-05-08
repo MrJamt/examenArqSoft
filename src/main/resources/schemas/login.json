@@ -1,0 +1,34 @@
+{
+  "login_request": {
+    "description": "Request de Login",
+    "type": "object",
+    "properties": {
+      "email": {
+        "type": "string",
+        "description": "Email del usuario",
+        "format": "email",
+        "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "password": {
+        "type": "string",
+        "description": "Contrasenia del usuario",
+        "minLength": 8,
+        "maxLength": 50
+      },
+      "token": {
+        "type": "string",
+        "description": "Token de autenticación del usuario",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "timestamp": {
+        "type": "integer",
+        "description": "Tiempo para la solicitud de inicio de sesión",
+        "minimum": 0
+      }
+    },
+    "required": ["email", "password"]
+  }
+}

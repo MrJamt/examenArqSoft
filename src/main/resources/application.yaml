@@ -1,0 +1,12 @@
+server:
+    port: 9090
+springdoc:
+    swagger-ui.path: /openapi/swagger-ui.html
+    api-docs.path: /openapi/v3/api-docs
+    packagesToScan: org.example.examen
+    pathsToMatch: /**
+sentry:
+    dsn: https://4856c5825763d9adf5ef70c1240ace8c@o4507141334630400.ingest.us.sentry.io/4507220589412352
+    # We recommend adjusting this value in production.
+    # Set traces-sample-rate to 1.0 to capture 100% of transactions for performance monitoring.
+    traces-sample-rate: 1.0
